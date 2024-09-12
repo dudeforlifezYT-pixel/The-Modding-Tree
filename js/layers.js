@@ -6,6 +6,11 @@ addLayer("p", {
         unlocked: true,
 		points: new Decimal(0),
     }},
+    upgrades: {
+        11: {
+
+        },
+    },
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "prestige points", // Name of prestige currency
@@ -22,7 +27,7 @@ addLayer("p", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "M", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true}
 })
